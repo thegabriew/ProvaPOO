@@ -1,0 +1,68 @@
+package Questao2;
+
+import java.util.Scanner;
+
+public class AgendaMedica {
+	
+	String data;
+	MarcacaoHorario [] marcarHorario = new MarcacaoHorario [7];
+	Scanner ler = new Scanner (System.in);
+
+	private void horariosDisponiveis() {
+		
+		marcarHorario[0].horario ="13:00";
+		marcarHorario[1].horario ="14:00";
+		marcarHorario[2].horario ="15:00";
+		marcarHorario[3].horario ="16:00";
+		marcarHorario[4].horario ="17:00";
+		marcarHorario[5].horario ="18:00";
+		marcarHorario[6].horario ="19:00";
+		marcarHorario[7].horario ="20:00";
+		
+	}
+	
+	public void Agendar() {
+		
+		for (int i = 0; i>8; i++) {
+		System.out.println("Insira o nome do paciente: ");
+		marcarHorario[i].nomePaciente = ler.nextLine();
+		System.out.println("Insira a data da consulta: ");
+		data = ler.nextLine();
+		
+		System.out.println("O paciente está no horário de " + marcarHorario[i].horario);
+		
+		}
+	}
+		
+		public void VerificarHorario() {
+			String busca;
+			
+			System.out.println("Insira o horário da consulta: ");
+			busca = ler.nextLine();
+			
+			for (int i = 0; i>8; i++) {
+			if(busca==marcarHorario[i].horario) {
+				
+				System.out.println("O paciente neste horário é +" marcarHorario[i].nomePaciente);
+			}
+			}
+		}
+		
+		public void VerificarNome() {
+			String busca1;
+			
+			System.out.println("Insira o nome do paciente: ");
+			busca1 = ler.nextLine();
+			
+			for (int i = 0; i>8; i++) {
+			if(busca1 ==marcarHorario[i].nomePaciente) {
+				
+				System.out.println("O paciente neste horário é +" marcarHorario[i].horario);
+			}
+			}
+		}
+		
+		
+		
+	}
+	
