@@ -1,0 +1,33 @@
+public class CadastroDeConta {
+	
+	public void procurar(int [] conta, int buscar) {
+		for (int i = 0; i < conta.length; i++) {
+			if (conta[i] == buscar) {
+				System.out.println("Conta presente.");
+			} else {
+				System.out.println("Conta não cadastrada.");
+			}
+		}
+	}
+	
+	public void excluir(int [] conta, int buscar) {
+		
+		for (int i = 0; i < conta.length; i++) {
+			if (conta[i] == buscar) {
+				System.out.println("Conta excluída.");
+			} else {
+				System.out.println("Conta não cadastrada.");
+			}
+		}
+	}
+	
+	public int qtdCadastradas(int [] conta) {
+		int cont = 0;
+		
+		for (int i = 0; i < conta.length; i++) {
+			cont++;
+		}
+		
+		return cont;
+	}
+}
